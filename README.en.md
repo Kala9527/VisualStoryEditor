@@ -1,60 +1,74 @@
-# Visual Story Editor
+﻿# Visual Story Editor
 
-Visual Story Editor is a visual editor for RPG stories, interactive fiction, and branching narratives. Built with Vue 3, Pinia, TypeScript, and Vite, it helps designers create, validate, preview, and export story graphs.
+[中文说明](./README.cn.md)
+
+> Visual editor for RPG quests, branching narrative, interactive fiction, state changes, and AI-assisted story drafting.  
+
+This repository is packaged to be easy to **star, fork, run, remix, and contribute to**. It keeps a dedicated English version for global GitHub discovery, with a separate Chinese version linked above.
+
+## Why Star This
+
+- Practical project idea with a clear real-world use case.
+- Small enough to fork, study, and customize quickly.
+- English-first bilingual README for both global and Chinese-speaking developers.
+- Clean setup instructions, project structure, roadmap, and contribution entry points.
+- Built around popular GitHub themes such as AI tools, TypeScript, developer tools, local-first apps, automation, and indie-friendly workflows when relevant.
+
+## What It Does
+
+Visual editor for RPG quests, branching narrative, interactive fiction, state changes, and AI-assisted story drafting.
 
 ## Highlights
 
-- Node-based editing for story, choice, condition, random, mutation, combat, and ending nodes.
-- Runtime preview to simulate branches and state changes.
-- Project import/export through JSON and Markdown.
-- Local draft saving.
-- Optional AI-assisted story text generation through OpenAI-compatible providers.
-- Vitest coverage for runtime behavior, expressions, effects, and import/export flows.
+- Node-based story graph editing
+- Choice, condition, random branch, state effect, battle, and ending nodes
+- Runtime preview for validating branches
+- JSON project import/export and Markdown export
+- AI-assisted story text generation entry point
 
-## Structure
+## Tech Stack
 
-```text
+`	ext
+Vue 3, TypeScript, Pinia, Vite, Vitest
+`
+
+## Quick Start
+
+`ash
+npm install`nnpm run dev`n`nnpm run typecheck`nnpm run test`nnpm run build
+`
+
+## Project Structure
+
+`	ext
 .
-├─ docs/
-├─ src/
-│  ├─ ai/
-│  ├─ components/
-│  ├─ data/
-│  ├─ domain/
-│  ├─ io/
-│  ├─ runtime/
-│  └─ stores/
-├─ tests/
-├─ package.json
-└─ vite.config.ts
-```
+|-- src/ or app/          Main source code
+|-- public/ or assets/    Static assets when available
+|-- docs/                 Notes, specs, or deployment docs when available
+|-- README.md             English-first bilingual project guide
+-- package / project files
+`
 
-## Run Locally
+## Deployment / Packaging
 
-Requires Node.js 20.19+ or 22.12+.
+- Do not commit generated builds, local databases, API keys, private logs, or large media files.
+- For frontend projects, deploy the production dist/ folder to GitHub Pages, Vercel, Netlify, Nginx, or package it with DistDesktopLauncher.
+- For desktop/mobile projects, publish only release artifacts from a clean build environment.
+- Keep configuration examples public and real credentials private.
 
-```bash
-npm install
-npm run dev
-```
+## Roadmap
 
-The default URL is `http://127.0.0.1:5173/`.
+- [ ] Collaborative story review mode
+- [ ] More export formats for game engines
+- [ ] Timeline and character relationship views
+- [ ] Prompt packs for writers and quest designers
 
-## Test And Build
+## Contributing
 
-```bash
-npm run typecheck
-npm run test
-npm run build
-npm run preview
-```
+Issues and pull requests are welcome. Useful contributions include better screenshots, demos, docs, templates, presets, provider guides, compatibility fixes, tests, and translations.
 
-The production build is written to `dist/`. It can be deployed as a static site or packaged with `DistDesktopLauncher`.
+If this project helps you, a star and fork make it easier for more people to discover it.
 
-## Deployment
 
-Upload the `dist/` folder to any static hosting service. If deploying under a subpath, adjust Vite's `base` option. AI generation requires user-provided compatible endpoints and API keys.
 
-## Thanks
 
-Thank you for visiting this project. If it helps you design clearer branching stories, a Star, Fork, issue, or suggestion would be deeply appreciated.
