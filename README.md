@@ -1,60 +1,111 @@
-# Visual Story Editor
+﻿# Visual Story Editor
 
-Visual Story Editor 是一个面向 RPG、互动小说和分支剧情设计的可视化编辑器。它使用 Vue 3、Pinia、TypeScript 和 Vite 构建，核心目标是把剧情节点、条件、随机分支、状态变更和运行预览放在同一个工作区里，让故事结构更容易被设计、验证和导出。
+> Visual editor for RPG quests, branching narrative, interactive fiction, state changes, and AI-assisted story drafting.  
+> 中文：面向 RPG、分支剧情和互动小说的可视化编辑器，支持状态变化、运行预览与 AI 辅助写作。
+
+This repository is packaged to be easy to **star, fork, run, remix, and contribute to**. It keeps the first screen English-first for global GitHub discovery, while preserving a Chinese guide below.
+
+## Why Star This
+
+- Practical project idea with a clear real-world use case.
+- Small enough to fork, study, and customize quickly.
+- English-first bilingual README for both global and Chinese-speaking developers.
+- Clean setup instructions, project structure, roadmap, and contribution entry points.
+- Built around popular GitHub themes such as AI tools, TypeScript, developer tools, local-first apps, automation, and indie-friendly workflows when relevant.
+
+## What It Does
+
+Visual editor for RPG quests, branching narrative, interactive fiction, state changes, and AI-assisted story drafting.
+
+## Highlights
+
+- Node-based story graph editing
+- Choice, condition, random branch, state effect, battle, and ending nodes
+- Runtime preview for validating branches
+- JSON project import/export and Markdown export
+- AI-assisted story text generation entry point
+
+## Tech Stack
+
+`	ext
+Vue 3, TypeScript, Pinia, Vite, Vitest
+`
+
+## Quick Start
+
+`ash
+npm install`nnpm run dev`n`nnpm run typecheck`nnpm run test`nnpm run build
+`
+
+## Project Structure
+
+`	ext
+.
+|-- src/ or app/          Main source code
+|-- public/ or assets/    Static assets when available
+|-- docs/                 Notes, specs, or deployment docs when available
+|-- README.md             English-first bilingual project guide
+-- package / project files
+`
+
+## Deployment / Packaging
+
+- Do not commit generated builds, local databases, API keys, private logs, or large media files.
+- For frontend projects, deploy the production dist/ folder to GitHub Pages, Vercel, Netlify, Nginx, or package it with DistDesktopLauncher.
+- For desktop/mobile projects, publish only release artifacts from a clean build environment.
+- Keep configuration examples public and real credentials private.
+
+## Roadmap
+
+- [ ] Collaborative story review mode
+- [ ] More export formats for game engines
+- [ ] Timeline and character relationship views
+- [ ] Prompt packs for writers and quest designers
+
+## Contributing
+
+Issues and pull requests are welcome. Useful contributions include better screenshots, demos, docs, templates, presets, provider guides, compatibility fixes, tests, and translations.
+
+If this project helps you, a star and fork make it easier for more people to discover it.
+
+---
+
+# 中文说明
+
+> 面向 RPG、分支剧情和互动小说的可视化编辑器，支持状态变化、运行预览与 AI 辅助写作。
+
+这个仓库已经改成 **英文优先、中文在后** 的双语 README，方便 GitHub 全球用户第一眼理解项目，同时保留中文开发者阅读体验。
+
+## 为什么值得 Star / Fork
+
+- 目标场景清晰，不是空壳项目。
+- 项目规模适合学习、二次开发和快速改造。
+- README、路线图、贡献入口和部署说明更完整。
+- topics 会尽量贴近当前 GitHub 热门方向，例如 AI、LLM、OpenAI-compatible、TypeScript、developer-tools、automation、local-first、gamedev 等。
 
 ## 功能亮点
 
-- 节点式剧情编辑：故事、选择、条件、随机、状态变更、战斗与结局节点。
-- 运行时预览：在编辑器内模拟流程，检查分支与状态变化。
-- 项目导入 / 导出：支持 JSON 项目文件与 Markdown 剧情文档导出。
-- 本地草稿保存：降低误关页面造成的损失。
-- AI 辅助文本生成入口：可配置 OpenAI 兼容服务生成剧情片段。
-- 测试覆盖：包含运行时、表达式、导入导出、状态效果等 Vitest 测试。
+- Node-based story graph editing
+- Choice, condition, random branch, state effect, battle, and ending nodes
+- Runtime preview for validating branches
+- JSON project import/export and Markdown export
+- AI-assisted story text generation entry point
 
-## 项目结构
+## 快速开始
 
-```text
-.
-├─ docs/                    # 设计文档与开发清单
-├─ src/
-│  ├─ ai/                   # AI 生成相关 schema、provider 与 prompt
-│  ├─ components/           # 编辑器界面与节点组件
-│  ├─ data/                 # 示例项目与空项目模板
-│  ├─ domain/               # 剧情领域模型、表达式与状态效果
-│  ├─ io/                   # 项目导入导出、校验、草稿存储
-│  ├─ runtime/              # 流程执行与随机源
-│  └─ stores/               # Pinia 状态管理
-├─ tests/                   # Vitest 测试
-├─ package.json
-└─ vite.config.ts
-```
+`ash
+npm install`nnpm run dev`n`nnpm run typecheck`nnpm run test`nnpm run build
+`
 
-## 本地运行
+## 部署与安全
 
-要求 Node.js 20.19+ 或 22.12+。
+- 不要提交 .env、API Key、生成媒体、大型文件、数据库、日志和构建产物。
+- 前端项目可以部署 dist/ 到 GitHub Pages、Vercel、Netlify 或 Nginx。
+- 桌面/移动端项目建议只发布干净环境构建出来的 release 文件。
 
-```bash
-npm install
-npm run dev
-```
+## 后续计划
 
-默认本地地址为 `http://127.0.0.1:5173/`。
-
-## 测试与构建
-
-```bash
-npm run typecheck
-npm run test
-npm run build
-npm run preview
-```
-
-构建产物位于 `dist/`，可部署到任意静态站点服务，也可以用 `DistDesktopLauncher` 打包为 Windows 桌面启动器。
-
-## 部署说明
-
-静态部署时上传 `dist/` 目录即可。若部署在子路径，请按目标平台调整 Vite `base` 配置。前端本身不包含服务端，AI 生成功能需要用户自行提供兼容接口与 Key。
-
-## 感谢与支持
-
-感谢你关注这个编辑器。分支故事很迷人，也很容易在复杂度里迷路，我希望这个工具能帮创作者更清楚地看见自己的世界。如果你喜欢它，欢迎 Star、Fork、提建议或分享给同样喜欢叙事工具的朋友，你的支持非常珍贵。
+- [ ] Collaborative story review mode
+- [ ] More export formats for game engines
+- [ ] Timeline and character relationship views
+- [ ] Prompt packs for writers and quest designers
